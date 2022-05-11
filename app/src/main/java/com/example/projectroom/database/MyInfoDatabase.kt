@@ -13,6 +13,7 @@ abstract class MyInfoDatabase: RoomDatabase() {
     abstract fun getMyInfoDao(): MyInfoDao
 
     companion object {
+        @Volatile
         private var INSTANCE: MyInfoDatabase? = null
         private val LOCK = Any()
 
